@@ -286,15 +286,15 @@ end = time.time()
 time_taken = str(end - start)
 
 print("▶️")
-print("Updated in " + time_taken + " seconds")
 print("---")
-print("Streaming now (Click to jump to the chatroom in your web browser)")
+print("Streaming now")
 for stream_live in schedule:
     if(stream_live['status'] == 'streaming'):
         print("🔴 "+en_name.get(str(stream_live['host']), "")+" "
                 +emoji.get(str(stream_live['host']), "")
             + " | href=" + stream_live['link'])
 print("---")
+print("Streaming later")
 for upcoming_live in schedule:
     if(upcoming_live['status'] == 'upcoming'):
         print(upcoming_live['time']+" "

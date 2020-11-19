@@ -248,7 +248,6 @@ for stream_live in schedule:
         print("🔴 " + stream_live['host'] + emoji.get(
             str(stream_live['host']), "") + " | href=" + stream_live['link'])
 print("---")
-print("Upcoming (Auto detected timezone is UTC" + timezone + ")")
 for upcoming_live in schedule:
     if(upcoming_live['status'] == 'upcoming'):
         print(upcoming_live['time']+" "+upcoming_live['host'] + emoji.get(str(upcoming_live['host']), "") +

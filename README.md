@@ -3,7 +3,7 @@
 
 `hololive_schedule` is a macOS status bar plugin using BitBar. It can help you get the streaming information of hololive members conveniently, just in your status bar.
 
-> BitBar can run your scripts regularly and put the output on your status bar. You can go to [here](https://getbitbar.com/) to install BitBar and know how it works.
+> BitBar can run your scripts regularly and put the output on your status bar. You can go to [here](https://github.com/matryer/bitbar) to install BitBar and know how it works.
 
 ![screenshot.png](https://github.com/Joseos123/hololive_schedule/blob/master/images/Screenshot%202020-11-19%20at%208.50.08%20PM.png?raw=true)
 
@@ -11,13 +11,13 @@
 
 ## Features
 
-1. Get liveroom information from [hololive offical schedule website](https://schedule.hololive.tv/lives/all), contains live time ( date and time ), liver's name and liveroom link in just serval seconds;
+1. Get liveroom information from [hololive offical schedule website](https://schedule.hololive.tv/), contains live time ( date and time ), liver's name and liveroom link in just serval seconds;
 2. Classify the liverooms into "Streaming now", "Upcoming" and "Stream over" (from hololive offical schedule website). The liverooms which are streaming will be at the top and have marks;
 3. Auto detect the user's timezone and display the accurate time (not in default Tokyo time).
 
 ## How to use
 
-1. [Install BitBar](https://getbitbar.com/releases) and run it once to set the plugins folder;
+1. [Install BitBar](https://github.com/matryer/bitbar/releases/download/v1.9.2/BitBar-v1.9.2.zip) and run it once to set the plugins folder;
 2. Download the script and copy it at the plugins folder;
 3. Refresh the plugin in your status bar and enjoy it.
 

@@ -23,6 +23,65 @@ except:
 start = time.time()
 
 
+# English name of the members
+en_name = {
+    'ホロライブ': 'Hololive',
+    'ときのそら': 'Tokino Sora',
+    'ロボ子さん': 'Roboco',
+    'さくらみこ': 'Sakura Miko',
+    '星街すいせい': 'Hoshimachi Suisei',
+    '夜空メル': 'Yozora Mel',
+    '夏色まつり': 'Natsuiro Matsuri',
+    '赤井はあと': 'Akai Haato',
+    'アキロゼ': 'Aki Rosenthal',
+    '白上フブキ': 'Shirakami Fubuki',
+    '湊あくあ': 'Minato Aqua',
+    '紫咲シオン': 'Murasaki Shion',
+    '百鬼あやめ': 'Nakiri Ayame',
+    '癒月ちょこ': 'Yuzuki Choco',
+    '大空スバル': 'Oozora Subaru',
+    '大神ミオ': 'Ookami Mio',
+    '猫又おかゆ': 'Nekomata Okayu',
+    '戌神ころね': 'Inugami Korone',
+    '兎田ぺこら': 'Usada Pekora',
+    '潤羽るしあ': 'Uruha Rushia',
+    '不知火フレア': 'Shiranui Flare',
+    '白銀ノエル': 'Shirogane Noel',
+    '宝鐘マリン': 'Houshou Marine',
+    '天音かなた': 'Amane Kanata',
+    '桐生ココ': 'Kiryu Coco',
+    '角巻わため': 'Tsunomaki Watame',
+    '常闇トワ': 'Tokoyami Towa',
+    '姫森ルーナ': 'Himemori Luna',
+    'AZKi': 'AZKi',
+    'Risu': 'Ayunda Risu',
+    'Moona': 'Moona Hoshinova',
+    'Iofi': 'Airani Iofifteen',
+    '夕刻ロベル': 'Yukoku Roberu',
+    '奏手イヅル': 'Kanade Izuru',
+    '月下カオル': 'Tsukishita Kaoru',
+    '花咲みやび': 'Hanasaki Miyabi',
+    '鏡見キラ': 'Kagami Kira',
+    'アルランディス': 'Arurandeisu',
+    '律可': 'Rikka',
+    'アステル・レダ': 'Astel Leda',
+    '岸堂天真': 'Kishido Temma',
+    '影山シエン': 'Kageyama Shien',
+    '荒咬オウガ': 'Aragami Oga',
+    'ホロスターズ': 'Holostars',
+    '雪花ラミィ': 'Yukihana Lamy',
+    '獅白ぼたん': 'Shishiro Botan',
+    '尾丸ポルカ': 'Omaru Polka',
+    '桃鈴ねね': 'Momosuzu Nene',
+    '魔乃アロエ': 'Mano Aloe',
+    'Ina': "Ninomae Ina'nis",
+    'Gura': 'Gawr Gura',
+    'Amelia': 'Watson Amelia',
+    'Calli': 'Mori Calliope',
+    'Kiara': 'Takanashi Kiara'
+}
+
+
 # Emoji of the members
 emoji = {
     'ときのそら': '',
@@ -235,7 +294,6 @@ end = time.time()
 time_taken = str(end - start)
 
 
-# Print in the BitBar
 print("▶️")
 print("---")
 print("Click to jump to hololive offical schedule website... | href=https://schedule.hololive.tv")
@@ -245,10 +303,13 @@ print("---")
 print("Streaming now (Click to jump to the chatroom in your web browser)")
 for stream_live in schedule:
     if(stream_live['status'] == 'streaming'):
-        print("🔴 " + stream_live['host'] + emoji.get(
-            str(stream_live['host']), "") + " | href=" + stream_live['link'])
+        print("🔴 "+en_name.get(str(stream_live['host']), "")+" "
+                +emoji.get(str(stream_live['host']), "")
+            + " | href=" + stream_live['link'])
 print("---")
 for upcoming_live in schedule:
     if(upcoming_live['status'] == 'upcoming'):
-        print(upcoming_live['time']+" "+upcoming_live['host'] + emoji.get(str(upcoming_live['host']), "") +
-              " | href="+upcoming_live['link'])
+        print(upcoming_live['time']+" "
+                +en_name.get(str(upcoming_live['host']), "")+" "
+                +emoji.get(str(upcoming_live['host']), "")
+                +" | href="+upcoming_live['link'])

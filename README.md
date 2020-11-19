@@ -4,7 +4,7 @@
 
 > BitBar can run your scripts regularly and put the output on your status bar. You can go to [here](https://getbitbar.com/) to install BitBar and know how it works.
 
-![screenshot.png](https://github.com/Joseos123/hololive_schedule/blob/master/images/Screenshot%202020-11-19%20at%208.47.17%20PM.png?raw=true)
+![screenshot.png](https://github.com/Joseos123/hololive_schedule/blob/master/images/Screenshot%202020-11-19%20at%208.50.08%20PM.png?raw=true)
 
 [GIF demo here](https://s1.ax1x.com/2020/07/13/UJLbdA.gif)
 

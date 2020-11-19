@@ -1,24 +1,16 @@
+#!/usr/bin/env PYTHONIOENCODING=UTF-8 /usr/local/bin/python3
+
 # Required additional packages:
 # 1. bs4 (html analyse)
 # 2. requests (get webpage)
 
-
+from bs4 import BeautifulSoup
+import requests as req
 import re
+from requests.cookies import RequestsCookieJar
 import os
 import time
 import datetime
-
-
-# Install BeautifulSoup, lxml and requests with pip3 (If they are not installed)
-try:
-    from bs4 import BeautifulSoup
-    import lxml
-    import requests as req
-except:
-    os.system('pip3 install bs4 lxml requests')
-    from bs4 import BeautifulSoup
-    import requests as req
-
 
 start = time.time()
 
@@ -216,7 +208,7 @@ def is_upcoming(tag):
     start = time.time()
     resp = req.get(tag['href'])
     upcoming_flag = re.search("scheduledStartTime", resp.text)
-    if(upcoming_flag is not None):
+    if(upcoming_flag != None):
         end = time.time()
         print("module is_upcoming: ")
         print(end-start)
@@ -264,7 +256,7 @@ for tag in raw_schedule[0].find_all():
     # combine date and time as a key in the dictionary
     elif(tag_classify(tag) == "time"):
         for time_string in tag.strings:
-            if(time_string.replace("\n", "").replace("\t", "").replace("\r", "").replace("None", "").replace(" ", "") is not ""):
+            if(time_string.replace("\n", "").replace("\t", "").replace("\r", "").replace("None", "").replace(" ", "") != ""):
                 live['time'] = utc_2_localtime(
                     date+" "+format_string(time_string))
                 # Streaming time is further than current time,
@@ -293,11 +285,7 @@ for tag in raw_schedule[0].find_all():
 end = time.time()
 time_taken = str(end - start)
 
-
 print("▶️")
-print("---")
-print("Click to jump to hololive offical schedule website... | href=https://schedule.hololive.tv")
-print("---")
 print("Updated in " + time_taken + " seconds")
 print("---")
 print("Streaming now (Click to jump to the chatroom in your web browser)")
@@ -313,3 +301,4 @@ for upcoming_live in schedule:
                 +en_name.get(str(upcoming_live['host']), "")+" "
                 +emoji.get(str(upcoming_live['host']), "")
                 +" | href="+upcoming_live['link'])
+    

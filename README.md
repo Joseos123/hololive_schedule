@@ -1,3 +1,4 @@
+## This fork just makes it english and removes the previous streams tab.
 # hololive_schedule
 
 `hololive_schedule` is a macOS status bar plugin using BitBar. It can help you get the streaming information of hololive members conveniently, just in your status bar.

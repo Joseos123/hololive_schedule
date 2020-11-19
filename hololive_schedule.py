@@ -253,9 +253,3 @@ for upcoming_live in schedule:
     if(upcoming_live['status'] == 'upcoming'):
         print(upcoming_live['time']+" "+upcoming_live['host'] + emoji.get(str(upcoming_live['host']), "") +
               " | href="+upcoming_live['link'])
-print("---")
-print("Streaming over")
-for over_live in schedule:
-    if(over_live['status'] == 'over'):
-        print(over_live['time']+" "+over_live['host'] + emoji.get(str(over_live['host']), "") +
-              " | href="+over_live['link'])

@@ -285,20 +285,22 @@ for tag in raw_schedule[0].find_all():
 end = time.time()
 time_taken = str(end - start)
 
-print("▶️")
+print(" ")
+print("---")
 print("---")
 print("Streaming now")
+print("---")
 for stream_live in schedule:
     if(stream_live['status'] == 'streaming'):
         print("🔴 "+en_name.get(str(stream_live['host']), "")+" "
-                +emoji.get(str(stream_live['host']), "")
             + " | href=" + stream_live['link'])
 print("---")
+print("---")
 print("Streaming later")
+print("---")
 for upcoming_live in schedule:
     if(upcoming_live['status'] == 'upcoming'):
         print(upcoming_live['time']+" "
                 +en_name.get(str(upcoming_live['host']), "")+" "
-                +emoji.get(str(upcoming_live['host']), "")
                 +" | href="+upcoming_live['link'])
     

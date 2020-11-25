@@ -3,7 +3,7 @@ This fork just makes it english and removes the previous streams tab.
 If you like what is here, please support the original creator!!
 # hololive_schedule
 
-`hololive_schedule` is a macOS status bar plugin using BitBar. It can help you get the streaming information of hololive members conveniently, just in your status bar.
+`hololive_schedule` is a macOS and KDE status bar plugin using BitBar and Kargos. It can help you get the streaming information of hololive members conveniently, just in your status bar.
 
 > BitBar can run your scripts regularly and put the output on your status bar. You can go to [here](https://github.com/matryer/bitbar) to install BitBar and know how it works.
 
@@ -17,7 +17,9 @@ If you like what is here, please support the original creator!!
 
 ## How to use
 
-1. [Install BitBar](https://github.com/matryer/bitbar/releases/download/v1.9.2/BitBar-v1.9.2.zip) and run it once to set the plugins folder;
+Macos : [Install BitBar](https://github.com/matryer/bitbar/releases/download/v1.9.2/BitBar-v1.9.2.zip) and run it once to set the plugins folder;
+Linux: [Install Kargos](https://github.com/lipido/kargos#installation)
+
 2. Download the script and copy it at the plugins folder;
 3. Refresh the plugin in your status bar and enjoy it.
 
